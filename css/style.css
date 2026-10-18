@@ -125,3 +125,5 @@ footer { border-top: 1px solid #2a0a0a; padding: 28px 20px; display: flex; flex-
   .reveal { transition: none; }
   html { scroll-behavior: auto; }
 }
+
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
