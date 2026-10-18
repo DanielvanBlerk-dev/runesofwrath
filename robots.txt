@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://runesofwrath.com/sitemap.xml
