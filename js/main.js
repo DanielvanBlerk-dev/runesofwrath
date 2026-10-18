@@ -1,7 +1,8 @@
 /* ---------- Config ---------- */
-// Mailing list: paste a form endpoint (e.g. Formspree "https://formspree.io/f/xxxxxx") to receive signups.
-// Left empty, signups are only saved in the visitor's own browser (useful for testing).
-const MAILING_LIST_ENDPOINT = "";
+// Mailing list: each signup is emailed to the address in this URL via FormSubmit (formsubmit.co).
+// After activating, you can swap the address for the random alias FormSubmit emails you, to keep your address out of the page source.
+// Set to "" to only save signups in the visitor's own browser (testing).
+const MAILING_LIST_ENDPOINT = "https://formsubmit.co/ajax/vanblerkdaniel@gmail.com";
 
 // Roster: edit freely. A card with no `img` shows a silhouette. To reveal a fighter, replace its entry, e.g. the first one with:
 //   { name: "Ripple", img: "assets/img/ripple.jpg", bio: "A shark-girl from the tide-torn coast, Ripple fights with the fury of the open sea. Fast, relentless and never far from the water's edge, she bends waves into weapons — and she's here to win." }
@@ -52,7 +53,7 @@ form.addEventListener("submit", async (e) => {
   if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = "Please enter your name and a valid email."; return; }
   try {
     if (MAILING_LIST_ENDPOINT) {
-      const r = await fetch(MAILING_LIST_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify({ name, email }) });
+      const r = await fetch(MAILING_LIST_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify({ name, email, _subject: "New Runes of Wrath signup", _template: "table", _captcha: "false" }) });
       if (!r.ok) throw new Error();
     } else {
       const list = JSON.parse(localStorage.getItem("row_signups") || "[]"); list.push({ name, email }); localStorage.setItem("row_signups", JSON.stringify(list));
