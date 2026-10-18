@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formsubmit.co; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Runes of Wrath — Coming 2027</title>
   <meta name="description" content="Eight warriors. One winner. No mercy. Runes of Wrath, a 3D fighting game coming 2027.">
   <link rel="icon" href="assets/img/logo.png">
@@ -73,8 +75,9 @@
       <h2 id="modal-title">Welcome, warrior.</h2>
       <p>We're so glad you found us. Join the mailing list for news, previews and early access as <em>Runes of Wrath</em> comes to life.</p>
       <form id="signup" novalidate>
-        <label>Name <input type="text" name="name" autocomplete="name" required></label>
-        <label>Email <input type="email" name="email" autocomplete="email" required></label>
+        <label>Name <input type="text" name="name" autocomplete="name" maxlength="80" required></label>
+        <label>Email <input type="email" name="email" autocomplete="email" maxlength="120" required></label>
+        <div class="hp" aria-hidden="true"><label>Leave empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
         <p class="msg" id="msg" role="status"></p>
         <div class="actions">
           <button type="submit" class="primary">Join the list</button>
