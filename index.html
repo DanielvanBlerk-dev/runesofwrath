@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Runes of Wrath — Coming 2027</title>
+  <meta name="description" content="Eight warriors. One winner. No mercy. Runes of Wrath, a 3D fighting game coming 2027.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Back to top">Runes of Wrath</a>
+    <nav>
+      <a href="#about" class="btn">About</a>
+      <a href="#roster" class="btn">Roster</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="logo" src="assets/img/logo.png" alt="Runes of Wrath">
+      <h1 class="tagline">
+        <span class="line1">Eight warriors. One winner.</span>
+        <span class="line2">No mercy.</span>
+      </h1>
+      <p class="coming">Coming 2027</p>
+      <div class="scroll-hint" aria-hidden="true"></div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="reveal">The Tournament</h2>
+      <div class="synopsis">
+        <p class="reveal">Every century, when the old runes awaken, a single tournament is called. No arena is neutral, no rule is sacred, and no warrior is welcome to leave.</p>
+        <p class="reveal">Eight fighters, each bound to a rune and a grudge, are drawn from the corners of a broken world. The runes lend them terrible power &mdash; and take something in return.</p>
+        <p class="reveal">Only one will carry the wrath home. <em>Placeholder synopsis &mdash; replace with the final story text in index.html.</em></p>
+      </div>
+    </section>
+
+    <section id="roster" class="roster">
+      <h2 class="reveal">The Roster</h2>
+      <div id="cards" class="cards"></div>
+    </section>
+  </main>
+
+  <section class="made-with">
+    <h3 class="reveal">Made with</h3>
+    <div class="logos reveal">
+      <img src="assets/logos/blender.png" alt="Blender">
+      <img src="assets/logos/unreal-engine.png" alt="Unreal Engine">
+      <img src="assets/logos/tripo.png" alt="Tripo">
+      <img src="assets/logos/accurig.png" alt="AccuRIG">
+    </div>
+  </section>
+
+  <footer>
+    <p class="copy">&copy; MTBL</p>
+    <ul class="social">
+      <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+      <li><a href="#" target="_blank" rel="noopener">X / Twitter</a></li>
+      <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="#" target="_blank" rel="noopener">Discord</a></li>
+    </ul>
+  </footer>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-box">
+      <button class="modal-x" id="modal-close" aria-label="Close">&times;</button>
+      <h2 id="modal-title">Welcome, warrior.</h2>
+      <p>We're so glad you found us. Join the mailing list for news, previews and early access as <em>Runes of Wrath</em> comes to life.</p>
+      <form id="signup" novalidate>
+        <label>Name <input type="text" name="name" autocomplete="name" required></label>
+        <label>Email <input type="email" name="email" autocomplete="email" required></label>
+        <p class="msg" id="msg" role="status"></p>
+        <div class="actions">
+          <button type="submit" class="primary">Join the list</button>
+          <button type="button" class="ghost" id="decline">No thanks</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
