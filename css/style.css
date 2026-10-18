@@ -52,6 +52,8 @@ a { color: inherit; }
 /* scroll reveal */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity 1.4s ease, transform 1.4s ease; }
 .reveal.in { opacity: 1; transform: none; }
+/* below the synopsis: much quicker fade */
+.roster .reveal, .made-with .reveal { transition-duration: .4s; transform: translateY(8px); }
 
 h2, h3 { font-family: var(--display); font-weight: 900; text-transform: uppercase; letter-spacing: .12em; text-align: center; }
 h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 0 0 2rem; }
