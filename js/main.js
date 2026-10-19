@@ -16,7 +16,7 @@ const cards = document.getElementById("cards");
 ROSTER.forEach((c, i) => {
   const last = i === ROSTER.length - 1;
   const el = document.createElement("article");
-  el.className = "card reveal" + (c.img ? "" : " soon") + (last ? " center" : i % 2 ? " flip" : "");
+  el.className = "card" + (c.img ? "" : " soon") + (last ? " center" : i % 2 ? " flip" : "");
   const pic = c.img
     ? `<div class="pic"><img src="${esc(c.img)}" alt="${esc(c.name)}" loading="lazy"></div>`
     : `<div class="pic sil" role="img" aria-label="Unrevealed fighter">${SILHOUETTE}</div>`;
