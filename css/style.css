@@ -140,3 +140,4 @@ footer { border-top: 1px solid #2a0a0a; padding: 28px 20px; display: flex; flex-
 .social .btn:hover { background: var(--red); color: #fff; border-color: var(--red); }
 .social .btn.support { border-color: var(--red); }
 .logos img[alt="Claude"] { height: 40px; }
+.logos img[alt="OpenAI"] { height: 56px; }
